@@ -87,12 +87,15 @@ Sections in order:
 
 ### Typography
 
-| Role | Treatment |
-|---|---|
-| Display / Hero | Large-format sans-serif, bold, tight letter-spacing — same as current site |
-| Body / UI | Clean sans-serif, comfortable line-height |
-| Terminal / Code | Monospace, used only inside terminal blocks and code snippets |
-| Handwritten accent | Existing handwritten font, used sparingly (location tag, personal touches) |
+Carry over font config from the current repo exactly.
+
+| Role | Font | CSS Variable |
+|---|---|---|
+| Display / Hero + Body / UI | Bricolage Grotesque | `--font-sans` / `--font-roboto` |
+| Terminal / Code | System monospace (`font-family: monospace`) | n/a — only inside terminal blocks |
+| Handwritten accent | DotGothic16 | `--font-handwritten` |
+
+Fonts are loaded via Google Fonts in `globals.css`. Use the same `@import` statements.
 
 ---
 
@@ -102,7 +105,7 @@ Sections in order:
 |---|---|---|
 | Framework | Next.js 15, App Router, TypeScript | Familiar, SSG for fast loads, dynamic routes for case studies |
 | Styling | Tailwind CSS | Same config as current site, extend with `terminal-black` |
-| Animation | Framer Motion + GSAP | Scroll reveals, timeline animation; GSAP for hero text |
+| Animation | Framer Motion + GSAP | GSAP for hero display text; Framer Motion for scroll reveals, timeline entrance animations, and card hover states |
 | Content | MDX files in `content/projects/` | Write case studies in Markdown, render as React pages; no CMS needed |
 | Deployment | Vercel | Free tier, auto-deploys from `main` branch |
 | Repository | New GitHub repo: `elinarosato-com` | Separate from studio repo |
