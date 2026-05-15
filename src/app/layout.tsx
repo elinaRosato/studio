@@ -5,8 +5,8 @@ import Footer from './components/layout/Footer';
 import EmailButton from './components/layout/ButtonEmail';
 
 export const metadata: Metadata = {
-  title: 'Elina Rosato | Software Engineer',
-  description: 'Software Engineer Portfolio',
+  title: 'Elina Rosato Studio | Software Development Solutions',
+  description: 'Elina Rosato Studio — Software development solutions for startups and established brands.',
   icons: {
     icon: '/studio-favicon.png',
   },
