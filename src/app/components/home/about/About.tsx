@@ -41,17 +41,17 @@ const About = (props: Props) => {
             </>
           ) : (
             <>
-              <p className=’ font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug’>
+              <p className='font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug'>
                 I&rsquo;m Elina Rosato, the founder of Elina Rosato Studio. Originally from
-                <strong className=’font-black relative hover-trigger inline-block mx-1’>Buenos Aires
-                  <img src="argentina.gif" alt="Buenos Aires" className=’absolute top-[-100%] left-0 hidden hover-image min-w-[200px]’ />
+                <strong className='font-black relative hover-trigger inline-block mx-1'>Buenos Aires
+                  <img src="argentina.gif" alt="Buenos Aires" className='absolute top-[-100%] left-0 hidden hover-image min-w-[200px]' />
                 </strong>
                 and now based in Malmö, I&rsquo;m a multidisciplinary engineer bridging the gap between hardware and software — working across web development, embedded systems, and cloud-based applications.
               </p>
-              <p className=’ font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug’>
+              <p className='font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug'>
                 My journey started with self-taught programming and
-                <strong className=’font-black relative hover-trigger inline-block mx-1’>freelancing
-                  <img src="desk.png" alt="Freelancing" className=’absolute top-[-100%] left-0 hidden hover-image min-w-[200px]’ />
+                <strong className='font-black relative hover-trigger inline-block mx-1'>freelancing
+                  <img src="desk.png" alt="Freelancing" className='absolute top-[-100%] left-0 hidden hover-image min-w-[200px]' />
                 </strong>
                 , which grew into a studio built around one belief: technology should be functional, efficient, and purposeful. I have experience developing scalable applications, working with multiple programming languages, and designing maintainable systems that stand the test of time.
               </p>

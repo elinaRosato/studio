@@ -12,14 +12,14 @@ const Hero = (props: Props) => {
       
       <div className='landscape:absolute z-10 w-1/2 landscape:w-1/4 self-end landscape:top-[24vh] portrait:top-[10vh] mr-[6vw]'>
         <p className=' lg:text-[1.1vw] md-portrait:text-xl text-md leading-tight text-left font-sans font-medium text-dark '>
-          I have a strong passion for all things technology and design. I help brands and companies build meaningful products and create memorable digital experiences from concept to launch.
+          I help brands and companies build meaningful products and create memorable digital experiences from concept to launch.
         </p>
       </div>
       
       <div className='relative flex flex-col gap-[1.5vh]'>
         <AnimatedTitle text="creative" className='overflow-hidden pl-6 md-portrait:py-5 text-[22vw] lg:text-[14vw] md-portrait:text-12xl landscape:leading-tight -mt-5 -mb-5 landscape:-mt-10 landscape:-mb-10 text-darkest-dark font-medium' />
         <Marquee />
-        <AnimatedTitle text="engineer" className='overflow-hidden pr-6 md-portrait:py-5 text-[22vw] lg:text-[14vw] md-portrait:text-12xl landscape:leading-tight -mt-5 -mb-5 landscape:-mt-10 landscape:-mb-10 text-darkest-dark flex justify-end landscape:justify-center font-medium'/>
+        <AnimatedTitle text="solutions" className='overflow-hidden pr-6 md-portrait:py-5 text-[22vw] lg:text-[14vw] md-portrait:text-12xl landscape:leading-tight -mt-5 -mb-5 landscape:-mt-10 landscape:-mb-10 text-darkest-dark flex justify-end landscape:justify-center font-medium'/>
       </div>
 
       <div className='landscape:absolute self-end bottom-[15vh] rotate-[-17deg] lg:rotate-[-22deg] mr-[10vw]'>
