@@ -1,20 +1,16 @@
 'use client'
 import React from 'react'
-import ProjectTemplate from '../../components/projectTemplate/ProjectTemplate'
-import ProgressBar from '../../components/projectTemplate/ProgressBar'
-import { ProjectContent } from '../../../types/types'
+import CaseTemplate from '../../components/caseTemplate/CaseTemplate'
+import ProgressBar from '../../components/caseTemplate/ProgressBar'
+import { CaseContent } from '../../../types/types'
 
 interface Images {
   src: string,
   alt: string,
   mobile: boolean,
 }
-interface Paragraphs {
-  subtitle: string
-  text: string[]
-}
 interface Control {
-  project: string,
+  title: string,
   href: string,
 }
 interface Controls {
@@ -26,38 +22,38 @@ type Props = {}
 
 const Baccello = (props: Props) => {
 
-  const projectTitle: string[] = ['Baccello']
-  const projectSummary: string = 'A landing page built with WordPress.'
+  const caseTitle: string[] = ['Baccello']
+  const caseSummary: string = 'A landing page built with WordPress.'
   const code: string = ''
   const demo: string = ''
-  const images:Images[] = [
+  const images: Images[] = [
     {
       src: '/baccello_mockup_sections.png',
-      alt: 'List Web App Mockup Desktop Light',
+      alt: 'Baccello Mockup Sections',
       mobile: true,
     },
     {
       src: '/baccello_mockup_checkout.png',
-      alt: 'List Web App Mockup Mobile',
+      alt: 'Baccello Mockup Checkout',
       mobile: true,
     },
     {
       src: '/baccello_mockup_full.png',
-      alt: 'List Web App Mockup Mobile Light',
+      alt: 'Baccello Mockup Full',
       mobile: false,
     },
     {
       src: '/baccello_mockup_hero.png',
-      alt: 'List Web App Mockup Mobile',
+      alt: 'Baccello Mockup Hero',
       mobile: true,
     },
     {
       src: '/baccello_mockup_mix.png',
-      alt: 'List Web App Mockup Mobile Light',
+      alt: 'Baccello Mockup Mix',
       mobile: false,
     },
   ]
-  const projectContent: ProjectContent[] = [
+  const caseContent: CaseContent[] = [
     { type: "h2", content: "The Background" },
     { type: "p", content: `Baccello.io came into being as a result of minds coming together. Guided by the CEO's vision and
         complemented by the web designer's artistry, I joined the mix to infuse my development expertise. The goal?
@@ -66,7 +62,7 @@ const Baccello = (props: Props) => {
     { type: "p", content: `WordPress ensured easy maintainability and editing for the client. Astra Theme,
         a bunch of usefull plugins and some CSS magic added unique elements that brought our page to life.
       ` },
-    { type: "p", content: `Now, let's talk teamwork. The project wasn't just lines of code; it was a all about collaboration.
+    { type: "p", content: `Now, let's talk teamwork. This case wasn't just lines of code; it was all about collaboration.
         We relied on each other's strengths, each member lending their expertise to the collective vision.
       ` },
     { type: "h2", content: "The Challenge" },
@@ -75,37 +71,37 @@ const Baccello = (props: Props) => {
         WordPress's limitations, I dived into a world of creative coding, crafting custom solutions to bring unique
         functionalities to life` },
     { type: "p", content: `While Baccello's landing page is no longer live due to the company's discontinuation,
-        the echoes of the journey remain. The project underlined the importance of finding innovative solutions
+        the echoes of the journey remain. This case underlined the importance of finding innovative solutions
         within a team context. From challenges, creativity and collaboration emerged a web page that briefly
         encapsulated the essence of NFTs, even if just for a virtual moment.
       ` },
   ]
   const controls: Controls = {
     previous: {
-      project: 'OrthoTeam Website Redesign',
+      title: 'OrthoTeam Website Redesign',
       href: '/cases/orthoteam'
     },
     next: {
-      project: '',
+      title: '',
       href: ''
     }
   }
 
   return (
     <div className={`min-h-screen overflow-scroll bg-almost-white flex flex-col`}>
-      <ProjectTemplate 
-        projectTitle={projectTitle} 
-        projectSummary={projectSummary} 
-        code={code} 
-        demo={demo} 
-        images={images} 
-        projectContent={projectContent} 
+      <CaseTemplate
+        caseTitle={caseTitle}
+        caseSummary={caseSummary}
+        code={code}
+        demo={demo}
+        images={images}
+        caseContent={caseContent}
         controls={controls}
-        href='/#cases' 
+        href='/#cases'
       />
       <ProgressBar />
     </div>
-      
+
   )
 }
 

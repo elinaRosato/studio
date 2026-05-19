@@ -8,7 +8,7 @@ type Props = {
   demo:string,
 }
 
-const ProjectDetailSummary = ({text, code, demo}: Props) => {
+const CaseDetailSummary = ({text, code, demo}: Props) => {
   return (
   <div className='flex flex-col gap-[4vh] lg:gap-0 lg:flex-row justify-between items-start lg:items-center'>
     <p className='lg:w-[30vw] font-roboto font-medium text-darkest-dark text-[4.3vw] leading-[6vw] lg:text-[1.8vw] lg:leading-[3vw]'>
@@ -22,4 +22,4 @@ const ProjectDetailSummary = ({text, code, demo}: Props) => {
   )
 }
 
-export default ProjectDetailSummary
+export default CaseDetailSummary

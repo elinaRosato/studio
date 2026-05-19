@@ -1,17 +1,11 @@
 import React from 'react'
-import ProjectDetailTitle from './ProjectDetailTitle'
-import ProjectDetailSummary from './ProjectDetailSummary'
+import CaseDetailTitle from './CaseDetailTitle'
+import CaseDetailSummary from './CaseDetailSummary'
 import ImageSliderOnScroll from '../global/ImageSliderOnScroll'
-import ProjectDetailControls from './ProjectDetailControls'
+import CaseDetailControls from './CaseDetailControls'
 import ButtonBack from './ButtonBack'
 import Image from 'next/image'
-import { ProjectContent } from '../../../types/types'
-
-interface Paragraphs {
-  subtitle?: string,
-  text: string[],
-  image?: string,
-}
+import { CaseContent } from '../../../types/types'
 
 interface Images {
   src: string,
@@ -19,7 +13,7 @@ interface Images {
   mobile: boolean,
 }
 interface Control {
-  project: string,
+  title: string,
   href: string,
 }
 interface Controls {
@@ -28,28 +22,28 @@ interface Controls {
 }
 
 type Props = {
-  projectTitle:string[],
-  projectSummary:string,
+  caseTitle:string[],
+  caseSummary:string,
   code:string,
   demo:string,
   images:Images[],
-  projectContent:ProjectContent[],
+  caseContent:CaseContent[],
   controls:Controls,
   href:string
 }
 
-const ProjectTemplate = ({projectTitle, projectSummary, code, demo, images, projectContent, controls, href}: Props) => {
+const CaseTemplate = ({caseTitle, caseSummary, code, demo, images, caseContent, controls, href}: Props) => {
   return (
-    <main className='overflow-hidden flex flex-col gap-[5vh] lg:gap-[3vw] py-[10vh] px-[10vw] lg:py-[16vh] lg:mx-[1.5vw] lg:border-2 lg:border-x-darkest-dark '>        
+    <main className='overflow-hidden flex flex-col gap-[5vh] lg:gap-[3vw] py-[10vh] px-[10vw] lg:py-[16vh] lg:mx-[1.5vw] lg:border-2 lg:border-x-darkest-dark '>
       <ButtonBack href={href} />
-      <ProjectDetailTitle title={projectTitle} />
-      <ProjectDetailSummary text={projectSummary} code={code} demo={demo} />
-      {images.length>1 ? 
-      <ImageSliderOnScroll images={images} /> : 
-      <Image src={images[0].src} width={0} height={0} layout='responsive' objectFit='cover' alt='Elina Rosato'/>
+      <CaseDetailTitle title={caseTitle} />
+      <CaseDetailSummary text={caseSummary} code={code} demo={demo} />
+      {images.length>1 ?
+      <ImageSliderOnScroll images={images} /> :
+      <Image src={images[0].src} width={0} height={0} layout='responsive' objectFit='cover' alt='Elina Rosato Studio'/>
       }
       <div className='flex flex-col gap-[5vw] lg:gap-[3vw] py-[2vh]'>
-        {projectContent.map((element, index) => {
+        {caseContent.map((element, index) => {
           switch(element.type){
             case 'h2':
               return <h2 key={index} className='font-sans font-bold text-darkest-dark text-[7vw] leading-[9vw] lg:text-[2vw] lg:leading-[5vw]'>{element.content}</h2>
@@ -70,9 +64,9 @@ const ProjectTemplate = ({projectTitle, projectSummary, code, demo, images, proj
           }
         })}
       </div>
-      <ProjectDetailControls controls={controls} />
+      <CaseDetailControls controls={controls} />
     </main>
   )
 }
 
-export default ProjectTemplate
+export default CaseTemplate

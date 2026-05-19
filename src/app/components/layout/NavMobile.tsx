@@ -82,7 +82,7 @@ const Nav = ({setIsActive, isActive}: Props) => {
         <Link href="/#cases"  onMouseEnter={() => {setSelectedIndicator("#cases")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#cases" ? 'text-accent' : ''}`} >Case studies</button></Link>
       </motion.div>
       <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
-        <Link href="/#projects"  onMouseEnter={() => {setSelectedIndicator("#projects")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#projects" ? 'text-accent' : ''}`} >Personal work</button></Link>
+        <Link href="/#cases"  onMouseEnter={() => {setSelectedIndicator("#cases")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#cases" ? 'text-accent' : ''}`} >Cases</button></Link>
       </motion.div>
       <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
         <Link href="/#services"  onMouseEnter={() => {setSelectedIndicator("#services")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#services" ? 'text-accent' : ''}`} >My jam</button></Link>

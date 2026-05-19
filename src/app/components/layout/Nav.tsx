@@ -8,7 +8,7 @@ const Nav = (props: Props) => {
     <nav className='flex flex-row items-center gap-[4.5vw]'>
       <NavItem link="/#about" text='my story'/>
       <NavItem link="/#cases" text='case studies'/>
-      <NavItem link="/#projects" text='personal project'/>
+      <NavItem link="/#cases" text='cases'/>
       <NavItem link="/#contact" text='contact'/>
     </ nav>
   )

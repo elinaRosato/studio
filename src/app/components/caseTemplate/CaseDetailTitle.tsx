@@ -5,7 +5,7 @@ type Props = {
   title:string[]
 }
 
-const ProjectDetailTitle = ({title}: Props) => {
+const CaseDetailTitle = ({title}: Props) => {
   return (
     <div className='flex flex-wrap lg:flex-row py-[2vw] lg:py-0 gap-x-[4vw] lg:gap-x-[1.5vw]'>
       {title.map((word,index) => {
@@ -17,4 +17,4 @@ const ProjectDetailTitle = ({title}: Props) => {
   )
 }
 
-export default ProjectDetailTitle
+export default CaseDetailTitle

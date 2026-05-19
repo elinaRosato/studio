@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import Heading from '../../global/Heading'
-import ProjectListItem from './ProjectListItem'
-import ProjectsModal from './ProjectsModal'
+import CaseListItem from './CaseListItem'
+import CasesModal from './CasesModal'
 import DecryptedText from '../hero/components/DecryptedText'
 import SectionTitle from '../../global/SectionTitle'
 import SectionHeading from '../../global/SectionHeading'
 import ParagraphSmall from '../../global/ParagraphSmall'
 
-interface Project {
+interface Case {
   title: string
   subtitle: string
   src: string
@@ -18,7 +18,7 @@ interface Project {
 type Props = {}
 
 const Cases = (props: Props) => {
-  const projects: Project[] = [
+  const cases: Case[] = [
     {
       title: 'Haparanda',
       subtitle: 'bold website for a backpack brand',
@@ -57,18 +57,18 @@ const Cases = (props: Props) => {
       <SectionHeading content="Every brand, every business, every idea has a story to tell—my job is to translate that story into a seamless digital experience." />
       <div className='flex flex-col lg:flex-row lg:pt-20'>
         <div className='lg:w-1/3 lg:pr-14'>
-          <ParagraphSmall content={"Whether it’s developing custom applications, optimizing existing systems, or crafting high-performance websites,  I work closely with my clients to bring their vision to life."} />
+          <ParagraphSmall content={"Whether it's developing custom applications, optimizing existing systems, or crafting high-performance websites,  I work closely with my clients to bring their vision to life."} />
         </div>
         <ul className='lg:w-2/3'>
-          {projects.map((project, index) => {
+          {cases.map((caseItem, index) => {
             return(
-              <ProjectListItem key={index} index={index} project={project} setModal={setModal} />
+              <CaseListItem key={index} index={index} caseItem={caseItem} setModal={setModal} />
             )
           })}
         </ul>
       </div>
-      
-      <ProjectsModal modal={modal} projects={projects} />
+
+      <CasesModal modal={modal} cases={cases} />
     </section>
   )
 }

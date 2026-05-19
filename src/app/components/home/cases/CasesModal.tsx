@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useRef } from 'react';
 
-interface Project {
+interface Case {
   title: string
   subtitle: string
   src: string
@@ -13,10 +13,10 @@ interface Project {
 
 type Props = {
   modal: { active: boolean, index: number },
-  projects: Project[]
+  cases: Case[]
 }
 
-const Modal = ({modal, projects}: Props) => {
+const CasesModal = ({modal, cases}: Props) => {
   const { active, index } = modal
 
   const [mousePosition, setMousePosition] = useState ({x:0, y:0})
@@ -48,8 +48,8 @@ const Modal = ({modal, projects}: Props) => {
     <>
       <motion.div variants={scaleAnimation} initial='initial' animate={active ? "enter" : "closed"} className={`hidden lg:flex lg:flex-col lg:absolute top-0 left-0 w-[330px] h-[220px] items-center justify-center overflow-hidden pointer-events-none`}>
         <div style={{top: index * -100 + "%"}} className={`absolute w-full h-full transition-all duration-500 ease-in-out`}>
-            {projects.map((project, index) => {
-              const {title, src, bgColor} = project
+            {cases.map((caseItem, index) => {
+              const {title, src, bgColor} = caseItem
               return(
                 <div key={index} style={{backgroundColor: bgColor}} className={`relative h-full w-full flex items-center justify-center`} >
                   <Image src={src} width={300} height={0}  objectFit='cover' alt={title} className=' h-auto'/>
@@ -65,4 +65,4 @@ const Modal = ({modal, projects}: Props) => {
   )
 }
 
-export default Modal
+export default CasesModal

@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect } from 'react'
-import ProjectTemplate from '../../components/projectTemplate/ProjectTemplate'
-import ProgressBar from '../../components/projectTemplate/ProgressBar'
+import CaseTemplate from '../../components/caseTemplate/CaseTemplate'
+import ProgressBar from '../../components/caseTemplate/ProgressBar'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
-import { ProjectContent } from '../../../types/types'
+import { CaseContent } from '../../../types/types'
 
 
 interface Images {
@@ -12,13 +12,8 @@ interface Images {
   alt: string,
   mobile: boolean,
 }
-interface Paragraphs {
-  subtitle?: string,
-  text: string[],
-  image?: string,
-}
 interface Control {
-  project: string,
+  title: string,
   href: string,
 }
 interface Controls {
@@ -50,76 +45,76 @@ const OrthoTeam = (props: Props) => {
     e.currentTarget.style.zIndex = '1';
   };
 
-  const projectTitle: string[] = ['OrthoTeam']
-  const projectSummary: string = 'A Bold and Disruptive Website for a Game-Changing Brand.'
+  const caseTitle: string[] = ['OrthoTeam']
+  const caseSummary: string = 'A Bold and Disruptive Website for a Game-Changing Brand.'
   const code: string = ''
   const demo: string = 'https://www.orthoteam.se'
 
-  const projectContent: ProjectContent[] = [
+  const caseContent: CaseContent[] = [
     { type: "h2", content: "The Background" },
     { type: "p", content: `OrthoTeam is a platform dedicated to providing high-quality resources, insights, and products for professionals and enthusiasts
         in the orthopedic industry. When the team at OrthoTeam approached me, they had a website that lacked strong brand identity and visual
-        cohesion. The existing logo was poorly designed, and the overall aesthetic didn’t reflect the cutting-edge nature of their industry.
+        cohesion. The existing logo was poorly designed, and the overall aesthetic didn't reflect the cutting-edge nature of their industry.
         They needed a complete overhaul — something modern, structured, and visually appealing. The goal was to create a website that not only
         looked professional but also made navigating its vast content easy and intuitive.`},
     { type: "h2", content: "The Design Process" },
     { type: "p", content: `Before diving into design and development, we started with a deep planning phase to ensure every decision aligned with
-        OrthoTeam’s brand identity. We gathered a vision board filled with bold colors, unconventional layouts, and dynamic elements to
+        OrthoTeam's brand identity. We gathered a vision board filled with bold colors, unconventional layouts, and dynamic elements to
         establish the aesthetic direction.
       `},
   ]
   const control: Controls = {
     previous: {
-      project: '3D Center',
+      title: '3D Center',
       href: '/cases/3dcenter'
     },
     next: {
-      project: 'Baccello Landing Page',
+      title: 'Baccello Landing Page',
       href: '/cases/baccello'
     }
   }
   const images: Images[] = [
     {
       src: '/orthoteam_hero.png',
-      alt: 'Haparanda Hero',
+      alt: 'OrthoTeam Hero',
       mobile: false,
     },
     {
       src: '/haparanda2.png',
-      alt: 'Haparanda Vision',
+      alt: 'OrthoTeam Vision',
       mobile: false,
     },
     {
       src: '/haparanda3.png',
-      alt: 'Haparanda Mockup',
+      alt: 'OrthoTeam Mockup',
       mobile: false,
     },
     {
       src: '/orthoteam_hero.png',
-      alt: 'Haparanda Hero',
+      alt: 'OrthoTeam Hero',
       mobile: false,
     },
     {
       src: '/haparanda2.png',
-      alt: 'Haparanda Vision',
+      alt: 'OrthoTeam Vision',
       mobile: false,
     },
   ]
 
   return (
     <div className={`min-h-screen overflow-scroll bg-almost-white flex flex-col`}>
-      <ProjectTemplate 
-        projectContent={projectContent} 
-        projectTitle={projectTitle} 
-        projectSummary={projectSummary} 
-        code={''} demo={demo} 
-        images={images} 
+      <CaseTemplate
+        caseContent={caseContent}
+        caseTitle={caseTitle}
+        caseSummary={caseSummary}
+        code={''} demo={demo}
+        images={images}
         controls={control}
-        href='/#cases' 
+        href='/#cases'
       />
       <ProgressBar />
     </div>
-      
+
   )
 }
 

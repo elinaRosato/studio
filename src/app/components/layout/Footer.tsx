@@ -18,7 +18,7 @@ const Footer = (props: Props) => {
             <SectionTitle content={"menu"} />
             <a className='block my-3' href="#about"><ParagraphSmall content={"Our Story"}/></a>
             <a className='block my-3' href="#cases"><ParagraphSmall content={"Case Studies"}/></a>
-            <a className='block my-3' href="#projects"><ParagraphSmall content={"Projects"}/></a>
+            <a className='block my-3' href="#cases"><ParagraphSmall content={"Cases"}/></a>
             <a className='block my-3' href="#services"><ParagraphSmall content={"Services"}/></a>
             <a className='block my-3' href="#contact"><ParagraphSmall content={"Let's Connect"}/></a>
           </div>
@@ -28,12 +28,6 @@ const Footer = (props: Props) => {
             <a className='block my-3' href="/cases/3dcenter"><ParagraphSmall content={"3DCenter"}/></a>
             <a className='block my-3' href="/cases/orthoteam"><ParagraphSmall content={"OrthoTeam"}/></a>
             <a className='block my-3' href="/cases/baccello"><ParagraphSmall content={"Baccello"}/></a>
-          </div>
-          <div className='pb-5'>
-            <SectionTitle content={"projects"} />
-            <a className='block my-3' href="/projects/poppingbubbles"><ParagraphSmall content={"Popping Bubbles"}/></a>
-            <a className='block my-3' href="/projects/phonebook"><ParagraphSmall content={"Phonebook App"}/></a>
-            <a className='block my-3' href="/projects/todolist"><ParagraphSmall content={"To-Do List App"}/></a>
           </div>
         </div>
       </div>

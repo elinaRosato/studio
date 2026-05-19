@@ -8,7 +8,7 @@ type Props = {
 
 const ButtonBack = ({ href }: Props) => {
   return (
-    <ButtonWavy href={href} external={false} reverse={true} text='Back to Projects' svg={BackArrow} />
+    <ButtonWavy href={href} external={false} reverse={true} text='Back to Cases' svg={BackArrow} />
   )
 }
 
